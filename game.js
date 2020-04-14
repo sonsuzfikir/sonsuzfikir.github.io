@@ -69,7 +69,7 @@ const textNodes = [
       {
         text: 'Otostop çekerek bir arabayı durdurmaya çalış.',
         requiredState: (currentState) => currentState.araba,
-        nextText: 1
+        nextText: 6
       },
       {
         text: 'Bir taksi durdur ve ona bin.',
@@ -79,7 +79,7 @@ const textNodes = [
       {
         text: 'Bir kişiyle karşılaşmayı umarak yürümeye devam et.',
 		requiredState: (currentState) => currentState.araba,  
-        nextText: 1
+        nextText: 5
       }
     ]
   },
@@ -101,7 +101,7 @@ const textNodes = [
   },
   {
     id: 4,
-    text: 'Bir eğlenceye denk geldin. Hemen sarhoş iki kişi yanına gelip seni aralarına davet ettiler. Sana başka bir isimle hitap ediyorlar. Belli ki seni başka birisi olarak düşünüyorlar. Bir şekilde masaya oturuyorsun. Sana yemek ve içki ikram ediyorlar. O sırada yanındaki adamın belinde bir silah olduğunu görüyorsun. Karnın çok aç.',
+    text: 'Bir eğlenceye denk geldin. Hemen sarhoş iki kişi yanına gelip seni aralarına davet ettiler. Sana çok iyi davranıyorlar ve nedenini anlayamıyorsun. Sana yemek ve içki ikram ediyorlar. O sırada yanındaki adamın belinde bir silah olduğunu görüyorsun. Karnın çok aç.',
     options: [
       {
         text: 'Hiç bozuntuya vermeden karnını doyur.',
@@ -119,82 +119,90 @@ const textNodes = [
   },
   {
     id: 5,
-    text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
+    text: 'Yaklaşık bir saat boyunca yürüdün ama kimseye denk gelmedin. Yağmur yüzünden de sırılsıklam olmuş durumdasın. Çok yorgun durumdasın, artık yürümeye gücün yok ve karnın çok aç.',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Otostop çekerek bir arabayı durdurmaya çalış.',
+        nextText: 6
+      },
+      {
+        text: 'Bir taksi durdur ve ona bin.',
+        nextText: 1
+      
       }
     ]
   },
   {
     id: 6,
-    text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
+    text: 'Siyah bir araba yaklaşıyor ve senin için duruyor. Arabaya biniyorsun, arabada büyük kutular var ve sana şöfor çok şaşırmış ve sinirli bir şekilde nereye gitmek istediğini soruyor. Hala hiç bir şey hatırlamıyorsun ve nereye gitmen gerektiği konusunda bir fikrin yok.',
     options: [
       {
-        text: 'Explore the castle',
+        text: 'Seni en yakın polis merkezine bırakmasını iste.',
         nextText: 7
+      },
+      {
+        text: "Turist olduğu, İstanbul'un en kalabalık turistik yerine gitmek istediğini söyle.",
+        nextText: 1
+      
       }
     ]
   },
   {
     id: 7,
-    text: 'While exploring the castle you come across a horrible monster in your path.',
+    text: "Seni bir polis merkezinin önüne getiriyor ve sinirli bir şekilde eğer kendisi veya kutular hakkında polise bir şey söylersen, seni bulup öldüreceğini söylüyor. Bir anda korkunun etkisi ile kendini dışarıda buluyorsun. Araba da hızlı bir şekilde uzaklaşıyor.",
     options: [
       {
-        text: 'Try to run',
+        text: "Polis merkezine gir.",
         nextText: 8
       },
       {
-        text: 'Attack it with your sword',
-        requiredState: (currentState) => currentState.sword,
-        nextText: 9
-      },
-      {
-        text: 'Hide behind your shield',
-        requiredState: (currentState) => currentState.shield,
-        nextText: 10
-      },
-      {
-        text: 'Throw the blue goo at it',
-        requiredState: (currentState) => currentState.blueGoo,
-        nextText: 11
+        text: "Panik içinde dikkatsiz bir şekilde koşmaya başla.",
+        nextText: 1
+      
       }
     ]
   },
   {
     id: 8,
-    text: 'Your attempts to run are in vain and the monster easily catches.',
+    text: "Polis merkezine giriyorsun, girişteki polis memuru seni direkt karşılıyor ve senden ilk olarak pasaportunu istiyor. Cebini kontrol ettiğinde üzerinde herhangi bir belge olmadığını fark ediyorsun.",
     options: [
       {
-        text: 'Restart',
-        nextText: -1
-      }
+        text: "Polise gerçekleri yani bilmediğin bir yerde uyandığını ve hiçbir şey hatırlamadığını söyle.",
+        nextText: 9
+      },
+	  {
+	  	text:"Aniden polis merkezinden kaçmaya başla.",
+		nextText: 4
+	  }
     ]
   },
   {
     id: 9,
-    text: 'You foolishly thought this monster could be slain with a single sword.',
+    text: "Polis çok şaşırdı. Hemen seni bir odaya alıp, sana biraz yiyecek verdiler. Odada yemeğini yerken bir dedektif içeri girdi. Kim olduğunu araştırdıklarını ve bir haftadır kayıp olan birisine çok benzediğini söylüyor. Bir bilgisayar programı sayesinde yüzlerinizin %98 oranında eşleştiğinden bahsediyor. Kafan iyice karışıyor, eğer o kişi sensen bir haftadır neredeydin?",
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: "Kayıp kişinin ailesi geldi. Senin ile görüşmek istiyorlar. Acaba sen onların çocuğu musun? Aile ile görüş.",
+        nextText: 11
+      },
+		{
+        text: "Şu anda hazır olmadığını, biraz dinlenmek istediğini söyle. ",
+        nextText: 10
       }
     ]
   },
   {
     id: 10,
-    text: 'The monster laughed as you hid behind your shield and ate you.',
+    text: "Dedektif seni zorlamadı. Bulunduğun oda da artık yalnızsın. Raflardaki kitaplara bakıyorsun. Çok büyük bir kitap en tepede dikkatini çekti. Ona ulaşmaya çalışıyorsun. Tam yakaladım derken, birden bire dengeni kaybedip yere düşüyorsun, aşırı büyük bir kitap olan Rusça sözlük kafana düşüyor ve beynin zarar görüyor. Komaya girip, felç kalıyorsun. Kimliğin asla belirlenemiyor ve hiç kimse olarak Rusça merakın yüzünden ölüyorsun.",
     options: [
       {
-        text: 'Restart',
+        text: "...Oyuna Tekrar Başla...",
         nextText: -1
       }
     ]
   },
   {
     id: 11,
-    text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+    text: "Senin amcan olduğunu söyleyen bir adam ve onun eşi aniden sana sarılmaya başladılar. Seni çok özlediklerini, hep seni aradıklarından bahsediyorlar. O heyecanla amcan sana bir piyango bileti gösterip, senin olduğunu söylüyor. Sen hiçbir şey anlamayıp 'Bu ne?' diye soruyorsun. Bu piyango biletine en büyük ikramiyenin çıktığını ve biletin sana ait olduğunu söylüyor.",
     options: [
       {
         text: 'Congratulations. Play Again.',
