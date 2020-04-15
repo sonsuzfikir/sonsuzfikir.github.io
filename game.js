@@ -205,11 +205,68 @@ const textNodes = [
     text: "Senin amcan olduğunu söyleyen bir adam ve onun eşi aniden sana sarılmaya başladılar. Seni çok özlediklerini, hep seni aradıklarından bahsediyorlar. O heyecanla amcan sana bir piyango bileti gösterip, senin olduğunu söylüyor. Sen hiçbir şey anlamayıp 'Bu ne?' diye soruyorsun. Bu piyango biletine en büyük ikramiyenin çıktığını ve biletin sana ait olduğunu söylüyor.",
     options: [
       {
-        text: 'Congratulations. Play Again.',
+        text: "Bileti kabul al ve onların yeğeni olduğunu kabul et.",
+        nextText: 12
+      },
+	  {
+		  text: "Onları hatırlamadığını, şu anda kim olduğunu bilmediğini ve bileti alamacağını söyle.",
+		  nextText: 13
+	  }
+    ]
+  },
+	{
+		id:12,
+		text:"Artık bir milyonersin. Kendine çok lüks bir ev aldın. Hayatında her şey yolunda ve çok mutlusun. İki mutlıu yılın ardından sonra evine polis geldi. Gerçek kimliğini tespit edildiğini ve senin farklı bir kişi olduğun anlaşıldı ve hakkında dolandırıcılık suçundan dava açıldı. Soruşturma devam ederken hapiste kafana çok çok büyük bir Türkçe grammer kitabı düştü. Kitap yüzünden 5 yıl komada kalıp ve ölüyorsun.",
+		options: [
+      {
+        text: "...Oyuna Tekrar Başla...",
         nextText: -1
       }
     ]
+	},
+	{
+    id: 13,
+    text: "O sırada dedektif içeri giriyor ve seni polis merkezine getiren kişi hakkında sorular soruyor. Seni polis merkezine getiren kişinin tehditini hatırlayıp ürküyorsun. O kişiyi tanımadığını, sadece arabasıyla seni polis buraya getirdiğini söylüyorsun. Dedektif sözünü kesip diyor ki: 'O kişi bir katil ve şu anda diğer polisler onu buraya getiriyor. Arabasındaki kutularda vücut parçaları var. Kutular üzerinde senin de parmak izin var. Senden de şüpheleniyoruz.' Sen şok oluyorsun.",
+    options: [
+      {
+        text: "Dedektife şöfor tarafından tehdit edildiğni söyle ve suçsuz olduğun konusunda dedektifi ikna etmeye çalış.",
+        nextText: 14
+      },
+	  {
+		  text: "Şöforün tehditi yüzünden korktuğun için tehdit hakkında hiçbir şey söyleme. Şimdilik bekle.",
+		  nextText: 1
+	  }
+    ]
+  },
+	{
+    id: 14,
+    text: "Dedektif seni dikkatle dinledi. Şimdilik seni şöfor ile görüştürmeyeceğini söyledi. Seni ayrı bir odaya koydular ve orada bekletildin. Bir saat sonra dedektif odaya geldi ve dedi ki:'Arabadaki ceset senin yüzün ile eşleşen kişiye ait. Yani neredeyse ikiz kardeşler gibisiniz. Fakat şöforün dediğine göre, sen kendisine o kişiyi öldürmesi için para veren, kendisine güvenmediğin için şuan kim olduğunu hatırlamayan bir kişi olarak rol yapan ve şuan onu katil olarak yakalatıp ondan kurtulmak isteyen birisin.'",
+    options: [
+      {
+        text: "Sinirden ceketini yere fırlat.",
+        nextText: 12
+      },
+	  {
+		  text: "Sakin bir şekilde bekle.",
+		  nextText: 1
+	  }
+    ]
+  },
+	{
+    id: 14,
+    text: "Ceketinden bir fotoğraf düştü. Fotoğrafta üç kişi gözüküyor. Sen, şoför ve ölen kişi. Ölen kişiyle çok benziyorsunuz. Tek farkınız kollarınızdaki dövme. Onda dövme var, sende yok. ",
+    options: [
+      {
+        text: "Sinirden ceketini yere fırlat.",
+        nextText: 12
+      },
+	  {
+		  text: "Sakin bir şekilde bekle.",
+		  nextText: 1
+	  }
+    ]
   }
+	
 ]
 
 startGame()
