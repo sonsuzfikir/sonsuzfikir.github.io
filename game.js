@@ -42,24 +42,13 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: "İstanbul'da kenar bir mahallede,yağmurlu bir havada üç yolun keşistiği bir noktada uyanıyorsun ve etrafında kimse yok. Hava karanlık ve hiçbir şey hatırlamıyorsun. Bir yöne gitmen gerekli.",
+    text: "İstanbul'da kenar bir mahallede,yağmurlu bir havada üç yolun keşistiği bir noktada uyandın ve etrafında kimse yok. Hava karanlık ve hiçbir şey hatırlamıyorsun. Bir yöne gitmen gerekli.",
     options: [
       {
         text: "Araba seslerinin geldiği yöne doğru git.",
         setState: { araba: true },
         nextText: 2
-      },
-      {
-        text: 'Ambulans sesinin geldiği yöne doğru git.',
-		setState:{ambluans:true},
-        nextText: 3
-      },
-		
-	  {
-        text: 'Kahkaha seslerinin geldiği yöne doğru git.',
-		 setState:{kahkaha:true}, 
-        nextText: 4
-      }	
+      }
     ]
   },
   {
@@ -74,47 +63,13 @@ const textNodes = [
       {
         text: 'Bir taksi durdur ve ona bin.',
         requiredState: (currentState) => currentState.araba,
-        nextText: 1
+        nextText: 18
       },
       {
         text: 'Bir kişiyle karşılaşmayı umarak yürümeye devam et.',
 		requiredState: (currentState) => currentState.araba,  
         nextText: 5
       }
-    ]
-  },
-  {
-    id: 3,
-    text: 'Vardığın yerde tam bir kaos söz konusu. Acı içerisinde bağıran bir kişiyi ambulansa koyuyorlar. Kıyafetleri kan içerisinde. Bazı kişiler insanların olay yerini terk etmemesi gerektiğini ve polisin varmak üzere olduğunu söylüyor.',
-    options: [
-      {
-        text: 'Kendini yaralı kişinin yakını olarak tanıt ve ambulansa bin.',
-		  requiredState: (currentState) => currentState.ambluans,
-        nextText: 1
-      },
-      {
-        text: 'Olay yerinde polisi bekle',
-		  requiredState: (currentState) => currentState.ambluans,
-        nextText: 1
-      }
-    ]
-  },
-  {
-    id: 4,
-    text: 'Bir eğlenceye denk geldin. Hemen sarhoş iki kişi yanına gelip seni aralarına davet ettiler. Sana çok iyi davranıyorlar ve nedenini anlayamıyorsun. Sana yemek ve içki ikram ediyorlar. O sırada yanındaki adamın belinde bir silah olduğunu görüyorsun. Karnın çok aç.',
-    options: [
-      {
-        text: 'Hiç bozuntuya vermeden karnını doyur.',
-		  requiredState: (currentState) => currentState.kahkaha,
-        nextText: 1
-      },
-		
-		{
-        text: 'Onların sandığı kişinin sen olmadığını söyle.',
-		  requiredState: (currentState) => currentState.kahkaha,
-        nextText: 1
-      },
-		
     ]
   },
   {
@@ -127,7 +82,7 @@ const textNodes = [
       },
       {
         text: 'Bir taksi durdur ve ona bin.',
-        nextText: 1
+        nextText: 18
       
       }
     ]
@@ -139,11 +94,6 @@ const textNodes = [
       {
         text: 'Seni en yakın polis merkezine bırakmasını iste.',
         nextText: 7
-      },
-      {
-        text: "Turist olduğu, İstanbul'un en kalabalık turistik yerine gitmek istediğini söyle.",
-        nextText: 1
-      
       }
     ]
   },
@@ -157,7 +107,7 @@ const textNodes = [
       },
       {
         text: "Panik içinde dikkatsiz bir şekilde koşmaya başla.",
-        nextText: 1
+        nextText: 16
       
       }
     ]
@@ -172,7 +122,7 @@ const textNodes = [
       },
 	  {
 	  	text:"Aniden polis merkezinden kaçmaya başla.",
-		nextText: 4
+		nextText: 16
 	  }
     ]
   },
@@ -234,7 +184,7 @@ const textNodes = [
       },
 	  {
 		  text: "Şöforün tehditi yüzünden korktuğun için tehdit hakkında hiçbir şey söyleme. Şimdilik bekle.",
-		  nextText: 1
+		  nextText: 17
 	  }
     ]
   },
@@ -244,26 +194,94 @@ const textNodes = [
     options: [
       {
         text: "Sinirden ceketini yere fırlat.",
-        nextText: 12
+        nextText: 15
       },
 	  {
 		  text: "Sakin bir şekilde bekle.",
-		  nextText: 1
+		  nextText: 17
 	  }
     ]
   },
 	{
-    id: 14,
-    text: "Ceketinden bir fotoğraf düştü. Fotoğrafta üç kişi gözüküyor. Sen, şoför ve ölen kişi. Ölen kişiyle çok benziyorsunuz. Tek farkınız kollarınızdaki dövme. Onda dövme var, sende yok. ",
+    id: 15,
+    text: "Ceketinden bir fotoğraf düştü. Fotoğrafta üç kişi gözüküyor. Sen, şoför ve ölen kişi. Ölen kişiyle çok benziyorsunuz. Tek farkınız kollarınızdaki dövme. Onda dövme var, sende yok. Dedektif fotoğrafı alıyor. Herkes şok içinde.",
     options: [
       {
-        text: "Sinirden ceketini yere fırlat.",
-        nextText: 12
+        text: "Şokun etkisiyle bulduğun bir boşlukta polis merkezinden kaç.",
+        nextText: 16
       },
 	  {
-		  text: "Sakin bir şekilde bekle.",
-		  nextText: 1
+		  text: "Dedektife ne olup bittiğini bilmediğini ve suçsuz olduğunu söyle.",
+		  nextText: 17
 	  }
+    ]
+  },
+	{
+    id: 16,
+    text: "Hızla koşarak kaçmaya çalışırken bir yerlerden kafana büyük bir Türkçe grammer kitabı düştü, 5 yıl komada kaldın ve öldün.",
+    options: [
+		{
+      text: "...Oyuna Tekrar Başla...",
+        nextText: -1
+		}
+    ]
+  },
+	{
+    id: 17,
+    text: "Yapılan soruşturmalar sonucunda, zamanında Rusça öğrenmeye çalışırken kafayı yediğin ve psikolojik olarak çöktüğün ve sana şizofren teşhisi koyulduğu ortaya çıktı. Özel bir hastaneye yerleştirildin. Orada sana özel yöntemlerle Rusça öğretildi. Rusça öğrendikten sonra, mucizevi bir şekilde iyileştin ve normal hayatına geri döndün.",
+    options: [
+		{
+      text: "...Oyuna Tekrar Başla...",
+        nextText: -1
+		}
+    ]
+  },
+	{
+    id: 18,
+    text: "Bir taksiye bindin ve taksinin radyosunda Rusça olarak Schubert'in Serenade bestesi çalıyor ve söyleyen kişi Yekaterina Savinova. Sen çok mutlu oluyorsun ve sessiz bir şekilde sen de söylüyorsun. Şoför sesini duyuyor ve çok güzel bir sesin olduğunu söylüyor. Yolda giderken şoför bir tabelada senin resmin ve bu akşam konserin olduğunu görüyor. Sen şok oluyorsun çünkü hiçbir şey hatırlamıyorsun. Şoför konsere gitmek için mi taksiye bindiğini soruyor. Sen de bir gariplik olduğunu anlamasın diye 'Evet' diyorsun ve seni konser salonuna götürüyor. Taksiden inmek üzereyken cebinde paran olmadığını fark ediyorsun. Taksici seni ünlü bir sanatçı olduğunu sanıyor ve senin cebinde ona verecek hiç paran yok.",
+    options: [
+      {
+        text: "Taksiden hızla dışarı atla ve kaçmaya çalış.",
+        nextText: 20
+      },
+	  {
+		  text: "Taksiciye evden acele ile çıktığını ve cüzdanını evde unuttuğunu söyle.",
+		  nextText: 19
+	  }
+    ]
+  },
+	{
+    id: 19,
+    text: "Taksici eğer onu konserine bedava alırsan senden para istemeyeceğini söyledi. Aksi taktirde üzerindeki kıyafetleri taksi ücretine karşılık alacağını söyleyerek seni tehdit etti.",
+    options: [
+      {
+        text: "Taksiden hızla dışarı atla ve kaçmaya çalış.",
+        nextText: 20
+      },
+	  {
+		  text: "Çaresiz bir şekilde senin olup olmadığını bilmediğin konsere taksici ile git.",
+		  nextText: 21
+	  }
+    ]
+  },
+	{
+    id: 20,
+    text: "Hızla koşarak kaçmaya çalışırken bir yerlerden kafana büyük bir Türkçe grammer kitabı düştü, 5 yıl komada kaldın ve öldün.",
+    options: [
+		{
+      text: "...Oyuna Tekrar Başla...",
+        nextText: -1
+		}
+    ]
+  },
+	{
+    id: 21,
+    text: "Konser salonunun girişinde seni bir görevli karşıladı ve dedi ki: 'Konsere neden bu kadar geç kaldınız? Neredeyse insanlar evlerine geri döneceklerdi.' Seni hızla hazırlayıp sahneye çıkardılar. İlginç bir şekilde Schubert'in Serenade bestesi çaldı ve harika bir şekilde söyledin. İnsanlar çok mutlu bir şekilde seni alkışlarken birden uyandın ve her şeyin bir rüya olduğunu farkettin. Ardından hüzünlü bir şekilde Rusça kursuna gitmek için hazırlanmaya devam ettin. Serenat'ı Rusça olarak söyleme rüyası Rusça öğrenen birisi için ne kadar hoştu değil mi?",
+     options: [
+		{
+      text: "Rusça Öğrenme Yolunda Başarılar:))) ...Oyuna Tekrar Başla...",
+        nextText: -1
+		}
     ]
   }
 	
