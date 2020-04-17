@@ -42,10 +42,10 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: "İstanbul'da kenar bir mahallede,yağmurlu bir havada üç yolun keşistiği bir noktada uyandın ve etrafında kimse yok. Hava karanlık ve hiçbir şey hatırlamıyorsun. Bir yöne gitmen gerekli.",
+    text: "İstanbul'da kenar bir mahallede,yağmurlu bir havada uyanıyorsun ve etrafında kimse yok. Hava çoktan kararmış ve hiçbir şey hatırlamıyorsun. Bir yöne gitmen gerekli./---/Ты пробуждаешься ото сна в захолустном регионе Стамбула, идёт дождь, и вокруг никого нет. Уже темно и ты ничего не помнишь. Ты можешь пойти только в одном направлении.",
     options: [
       {
-        text: "Araba seslerinin geldiği yöne doğru git.",
+        text: "Araba seslerinin geldiği yöne doğru git./--/Иди в направлении звука машины.",
         setState: { araba: true },
         nextText: 2
       }
@@ -53,20 +53,20 @@ const textNodes = [
   },
   {
     id: 2,
-    text: 'Şuan çevre yolunun kenarına ulaştın. Etrafında insan yok ve trafik çok yoğun değil ve yağmurun şiddeti giderek artıyor. Arabalar hızla önünden geçip gidiyorlar.',
+    text: 'Bir çevre yolunun kenarına ulaştın. Etrafında insan yok ve trafik çok yoğun değil. Yağmurun şiddeti giderek artıyor. Arabalar hızla önünden geçip gidiyorlar./--/Ты дошёл/дошла до края кольцевой дороги. Вокруг ни людей, ни пробок на дорогах. Дождь постепенно увеличивается. Машины проносятся перед тобой. ',
     options: [
       {
-        text: 'Otostop çekerek bir arabayı durdurmaya çalış.',
+        text: 'Otostop çekerek bir arabayı durdurmaya çalış./--/Попробуй жестом остановить одну машину.',
         requiredState: (currentState) => currentState.araba,
         nextText: 6
       },
       {
-        text: 'Bir taksi durdur ve ona bin.',
+        text: 'Bir taksi durdur ve ona bin./--/Попробуй остановить такси.',
         requiredState: (currentState) => currentState.araba,
         nextText: 18
       },
       {
-        text: 'Bir kişiyle karşılaşmayı umarak yürümeye devam et.',
+        text: 'Bir kişiyle karşılaşmayı umarak yürümeye devam et./--/Продолжай идти, надеясь встретить кого-нибудь.',
 		requiredState: (currentState) => currentState.araba,  
         nextText: 5
       }
@@ -74,14 +74,14 @@ const textNodes = [
   },
   {
     id: 5,
-    text: 'Yaklaşık bir saat boyunca yürüdün ama kimseye denk gelmedin. Yağmur yüzünden de sırılsıklam olmuş durumdasın. Çok yorgun durumdasın, artık yürümeye gücün yok ve karnın çok aç.',
+    text: 'Yaklaşık bir saat boyunca yürüdün ama kimseye denk gelmedin. Yağmur yüzünden de sırılsıklam olmuş durumdasın. Çok yorgun durumdasın, artık yürümeye gücün yok ve karnın çok aç./--/Ты гулял/гуляла около часа, но ты никого не встретил/встретила. Причём ты промок/промокла под дождём насквозь. Ты очень устал/устала и голоден/голодна. У тебя нет сил идти дальше.',
     options: [
       {
-        text: 'Otostop çekerek bir arabayı durdurmaya çalış.',
+        text: 'Otostop çekerek bir arabayı durdurmaya çalış./--/Попробуй жестом остановить одну машину.',
         nextText: 6
       },
       {
-        text: 'Bir taksi durdur ve ona bin.',
+        text: 'Bir taksi durdur ve ona bin./--/Попробуй остановить такси.',
         nextText: 18
       
       }
@@ -89,10 +89,10 @@ const textNodes = [
   },
   {
     id: 6,
-    text: 'Siyah bir araba yaklaşıyor ve senin için duruyor. Arabaya biniyorsun, arabada büyük kutular var ve sana şöfor çok şaşırmış ve sinirli bir şekilde nereye gitmek istediğini soruyor. Hala hiç bir şey hatırlamıyorsun ve nereye gitmen gerektiği konusunda bir fikrin yok.',
+    text: 'Siyah bir araba yaklaşıyor ve senin için duruyor. Arabaya biniyorsun, arabada büyük kutular var ve sana şöfor çok şaşırmış ve sinirli bir şekilde nereye gitmek istediğini soruyor. Hala hiç bir şey hatırlamıyorsun ve nereye gitmen gerektiği konusunda bir fikrin yok./--/Чёрная машина подъезжает и останавливается около тебя. Ты садишься в машину. В машине лежат большие коробки, водитель очень удивлён и нервно спрашивает, куда ты хочешь поехать. Вдобавок ты ничего не помнишь и у тебя нет идей, куда поехать.',
     options: [
       {
-        text: 'Seni en yakın polis merkezine bırakmasını iste.',
+        text: 'Seni en yakın polis merkezine bırakmasını iste./--/Попроси его отвезти тебя к ближайший полицейский участк.',
         nextText: 7
       }
     ]
@@ -128,14 +128,14 @@ const textNodes = [
   },
   {
     id: 9,
-    text: "Polis çok şaşırdı. Hemen seni bir odaya alıp, sana biraz yiyecek verdiler. Odada yemeğini yerken bir dedektif içeri girdi. Kim olduğunu araştırdıklarını ve bir haftadır kayıp olan birisine çok benzediğini söylüyor. Bir bilgisayar programı sayesinde yüzlerinizin %98 oranında eşleştiğinden bahsediyor. Kafan iyice karışıyor, eğer o kişi sensen bir haftadır neredeydin?",
+    text: "Polis çok şaşırdı. Hemen seni bir odaya alıp, sana biraz yiyecek verdiler. Odada yemeğini yerken bir dedektif içeri girdi. Kim olduğunu araştırdıklarını ve bir haftadır kayıp olan birisine çok benzediğini söyledi. Kafan iyice karışıyor, eğer o kişi sensen bir haftadır neredeydin?",
     options: [
       {
         text: "Kayıp kişinin ailesi geldi. Senin ile görüşmek istiyorlar. Acaba sen onların çocuğu musun? Aile ile görüş.",
         nextText: 11
       },
 		{
-        text: "Şu anda hazır olmadığını, biraz dinlenmek istediğini söyle. ",
+        text: "Şu anda hazır olmadığını ve biraz dinlenmek istediğini söyle.",
         nextText: 10
       }
     ]
