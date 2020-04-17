@@ -17,10 +17,11 @@ body {
 .container {
   width: 800px;
   max-width: 80%;
-  background-color: white;
+  background-color: #241F1F;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
+  color: green;
 }
 
 .btn-grid {
@@ -31,14 +32,16 @@ body {
 }
 
 .btn {
-  background-color: hsl(200, 100%, 50%);
-  border: 1px solid hsl(200, 100%, 30%);
+  /*background-color: hsl(200, 100%, 50%);*/
+  background-color: #241F1F;
+  border: 3px solid #86292A;
   border-radius: 5px;
   padding: 5px 10px;
-  color: white;
+  color: green;
   outline: none;
 }
 
 .btn:hover {
-  border-color: black;
+  border-color: #ff3333;
+  box-shadow: 2px 2px #ff3333;	
 }
