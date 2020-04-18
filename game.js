@@ -89,7 +89,7 @@ const textNodes = [
   },
   {
     id: 6,
-    text: 'Siyah bir araba yaklaşıyor ve senin için duruyor. Arabaya biniyorsun, arabada büyük kutular var ve sana şöfor çok şaşırmış ve sinirli bir şekilde nereye gitmek istediğini soruyor. Hala hiç bir şey hatırlamıyorsun ve nereye gitmen gerektiği konusunda bir fikrin yok./--/Чёрная машина подъезжает и останавливается около тебя. Ты садишься в машину. В машине лежат большие коробки, водитель очень удивлён и нервно спрашивает, куда ты хочешь поехать. Вдобавок ты ничего не помнишь и у тебя нет идей, куда поехать.',
+    text: 'Siyah bir araba yaklaşıyor ve senin için duruyor. Arabaya biniyorsun, arabada büyük kutular var ve sana şoför çok şaşırmış ve sinirli bir şekilde nereye gitmek istediğini soruyor. Hala hiç bir şey hatırlamıyorsun ve nereye gitmen gerektiği konusunda bir fikrin yok./--/Чёрная машина подъезжает и останавливается около тебя. Ты садишься в машину. В машине лежат большие коробки, водитель очень удивлён и нервно спрашивает, куда ты хочешь поехать. Вдобавок ты ничего не помнишь и у тебя нет идей, куда поехать.',
     options: [
       {
         text: 'Seni en yakın polis merkezine bırakmasını iste./--/Попроси его отвезти тебя к ближайший полицейский участк.',
@@ -99,14 +99,14 @@ const textNodes = [
   },
   {
     id: 7,
-    text: "Seni bir polis merkezinin önüne getiriyor ve sinirli bir şekilde eğer kendisi veya kutular hakkında polise bir şey söylersen, seni bulup öldüreceğini söylüyor. Bir anda korkunun etkisi ile kendini dışarıda buluyorsun. Araba da hızlı bir şekilde uzaklaşıyor.",
+    text: "Seni bir polis merkezinin önüne getiriyor ve sinirli bir şekilde eğer kendisi veya kutular hakkında polise bir şey söylersen, seni bulup öldüreceğini söylüyor. Bir anda korkunun etkisi ile kendini dışarıda buluyorsun. Araba da hızlı bir şekilde uzaklaşıyor./--/Он привозит тебя к полицейскому участку и злобно говорит, что если ты расскажешь о нём или коробках, он найдёт тебя и убьёт. Ты вдруг оказался/оказалась на улице, потому что тебе очень страшно. Машина быстро уезжает.",
     options: [
       {
-        text: "Polis merkezine gir.",
+        text: "Polis merkezine gir./--/Заходи в полицейский участок.",
         nextText: 8
       },
       {
-        text: "Panik içinde dikkatsiz bir şekilde koşmaya başla.",
+        text: "Panik içinde dikkatsiz bir şekilde koşmaya başla./--/Начинай хаотично бегать в приступе паники.",
         nextText: 16
       
       }
@@ -114,28 +114,28 @@ const textNodes = [
   },
   {
     id: 8,
-    text: "Polis merkezine giriyorsun, girişteki polis memuru seni direkt karşılıyor ve senden ilk olarak pasaportunu istiyor. Cebini kontrol ettiğinde üzerinde herhangi bir belge olmadığını fark ediyorsun.",
+    text: "Polis merkezine giriyorsun, girişteki polis memuru seni direkt karşılıyor ve senden ilk olarak pasaportunu istiyor. Cebini kontrol ettiğinde üzerinde herhangi bir belge olmadığını fark ediyorsun./--/Ты заходишь в полицейский участок, сотрудник полиции на входе встречает тебя  и сначала спрашивает твой паспорт. Когда ты проверяешь свой карман, ты понимаешь, что у тебя нет документа.",
     options: [
       {
-        text: "Polise gerçekleri yani bilmediğin bir yerde uyandığını ve hiçbir şey hatırlamadığını söyle.",
+        text: "Polise gerçekleri yani bilmediğin bir yerde uyandığını ve hiçbir şey hatırlamadığını söyle./--/Скажи правду полиции, что ты проснулся/проснулась в неизвестном месте и ничего не помнишь.",
         nextText: 9
       },
 	  {
-	  	text:"Aniden polis merkezinden kaçmaya başla.",
+	  	text:"Aniden polis merkezinden kaçmaya başla./--/Внезапно начни убегать из полицейского участка",
 		nextText: 16
 	  }
     ]
   },
   {
     id: 9,
-    text: "Polis çok şaşırdı. Hemen seni bir odaya alıp, sana biraz yiyecek verdiler. Odada yemeğini yerken bir dedektif içeri girdi. Kim olduğunu araştırdıklarını ve bir haftadır kayıp olan birisine çok benzediğini söyledi. Kafan iyice karışıyor, eğer o kişi sensen bir haftadır neredeydin?",
+    text: "Polis çok şaşırdı. Hemen seni bir odaya alıp, sana biraz yiyecek verdiler. Odada yemeğini yerken bir dedektif içeri girdi. Kim olduğunu araştırdıklarını ve bir haftadır kayıp olan birisine çok benzediğini söyledi. Kafan iyice karışıyor, eğer o kişi sensen bir haftadır neredeydin?/--/Полиция очень удивлена. Тебя отвели в комнату и подали еду. Пока ты ешь, детектив входит в комнату. Он говорит, что они выяснили, что ты очень похож/похожа на человека, который считался пропавшим без вести в течение недели. Твоя сбит с толку, если ты был/была этим человеком, где ты был/была в течение недели?",
     options: [
       {
-        text: "Kayıp kişinin ailesi geldi. Senin ile görüşmek istiyorlar. Acaba sen onların çocuğu musun? Aile ile görüş.",
+        text: "Kayıp kişinin ailesi geldi. Senin ile görüşmek istiyorlar. Acaba sen onların çocuğu musun? Aile ile görüş./--/Семья пропавшего человека пришла. Они хотят поговорить с тобой. Неужели ты их ребёнок? Поговори с семьёй.",
         nextText: 11
       },
 		{
-        text: "Şu anda hazır olmadığını ve biraz dinlenmek istediğini söyle.",
+        text: "Şu anda hazır olmadığını ve biraz dinlenmek istediğini söyle./--/Скажи, что ты не готов/готова в данный момент, и ты хочешь немного отдохнуть.",
         nextText: 10
       }
     ]
@@ -152,7 +152,7 @@ const textNodes = [
   },
   {
     id: 11,
-    text: "Senin amcan olduğunu söyleyen bir adam ve onun eşi aniden sana sarılmaya başladılar. Seni çok özlediklerini, hep seni aradıklarından bahsediyorlar. O heyecanla amcan sana bir piyango bileti gösterip, senin olduğunu söylüyor. Sen hiçbir şey anlamayıp 'Bu ne?' diye soruyorsun. Bu piyango biletine en büyük ikramiyenin çıktığını ve biletin sana ait olduğunu söylüyor.",
+    text: "Senin amcan olduğunu söyleyen bir adam ve onun eşi aniden sana sarılmaya başladılar. Seni çok özlediklerini ve hep seni aradıklarından bahsediyorlar. O heyecanla amcan sana bir piyango bileti gösterip, senin olduğunu söylüyor. Sen hiçbir şey anlamayıp 'Bu ne?' diye soruyorsun. Bu piyango biletine en büyük ikramiyenin çıktığını ve biletin sana ait olduğunu söylüyor.",
     options: [
       {
         text: "Bileti kabul al ve onların yeğeni olduğunu kabul et.",
@@ -166,7 +166,7 @@ const textNodes = [
   },
 	{
 		id:12,
-		text:"Artık bir milyonersin. Kendine çok lüks bir ev aldın. Hayatında her şey yolunda ve çok mutlusun. İki mutlıu yılın ardından sonra evine polis geldi. Gerçek kimliğini tespit edildiğini ve senin farklı bir kişi olduğun anlaşıldı ve hakkında dolandırıcılık suçundan dava açıldı. Soruşturma devam ederken hapiste kafana çok çok büyük bir Türkçe grammer kitabı düştü. Kitap yüzünden 5 yıl komada kalıp ve ölüyorsun.",
+		text:"Artık bir milyonersin. Kendine çok lüks bir ev aldın. Hayatında her şey yolunda ve çok mutlusun. Mutlu iki yılın ardından sonra evine polis geldi. Gerçek kimliğini tespit edildiğini ve senin farklı bir kişi olduğun anlaşıldı ve hakkında dolandırıcılık suçundan dava açıldı. Soruşturma devam ederken hapiste kafana çok çok büyük bir Türkçe grammer kitabı düştü. Kitap yüzünden 5 yıl komada kalıp ve ölüyorsun.",
 		options: [
       {
         text: "...Oyuna Tekrar Başla...",
@@ -176,21 +176,21 @@ const textNodes = [
 	},
 	{
     id: 13,
-    text: "O sırada dedektif içeri giriyor ve seni polis merkezine getiren kişi hakkında sorular soruyor. Seni polis merkezine getiren kişinin tehditini hatırlayıp ürküyorsun. O kişiyi tanımadığını, sadece arabasıyla seni polis buraya getirdiğini söylüyorsun. Dedektif sözünü kesip diyor ki: 'O kişi bir katil ve şu anda diğer polisler onu buraya getiriyor. Arabasındaki kutularda vücut parçaları var. Kutular üzerinde senin de parmak izin var. Senden de şüpheleniyoruz.' Sen şok oluyorsun.",
+    text: "O sırada dedektif içeri giriyor ve seni polis merkezine getiren kişi hakkında sorular soruyor. Seni polis merkezine getiren kişinin tehditini hatırlayıp ürküyorsun. O kişiyi tanımadığını söylüyorsun. Dedektif sözünü kesip diyor ki: 'O kişi bir katil ve şu anda diğer polisler onu buraya getiriyor. Arabasındaki kutularda vücut parçaları var. Kutular üzerinde senin de parmak izin var. Senden de şüpheleniyoruz.' Sen şok oluyorsun.",
     options: [
       {
-        text: "Dedektife şöfor tarafından tehdit edildiğni söyle ve suçsuz olduğun konusunda dedektifi ikna etmeye çalış.",
+        text: "Dedektife şoför tarafından tehdit edildiğni söyle ve suçsuz olduğun konusunda dedektifi ikna etmeye çalış.",
         nextText: 14
       },
 	  {
-		  text: "Şöforün tehditi yüzünden korktuğun için tehdit hakkında hiçbir şey söyleme. Şimdilik bekle.",
+		  text: "Şoförün tehditi yüzünden korktuğun için hiçbir şey söyleme. Şimdilik bekle.",
 		  nextText: 17
 	  }
     ]
   },
 	{
     id: 14,
-    text: "Dedektif seni dikkatle dinledi. Şimdilik seni şöfor ile görüştürmeyeceğini söyledi. Seni ayrı bir odaya koydular ve orada bekletildin. Bir saat sonra dedektif odaya geldi ve dedi ki:'Arabadaki ceset senin yüzün ile eşleşen kişiye ait. Yani neredeyse ikiz kardeşler gibisiniz. Fakat şöforün dediğine göre, sen kendisine o kişiyi öldürmesi için para veren, kendisine güvenmediğin için şuan kim olduğunu hatırlamayan bir kişi olarak rol yapan ve şuan onu katil olarak yakalatıp ondan kurtulmak isteyen birisin.'",
+    text: "Dedektif seni dikkatle dinledi. Şimdilik seni şoför ile görüştürmeyeceğini söyledi. Seni ayrı bir odaya koydular ve orada bekletildin. Bir saat sonra dedektif odaya geldi ve dedi ki:'Arabadaki ceset senin sana benzeyen kişiye ait. Şoförün dediğine göre, sen kendisine o kişiyi öldürmesi için para veren, kendisine güvenmediğin için şuan kim olduğunu hatırlamayan bir kişi olarak rol yapan ve şuan onu katil olarak yakalatıp ondan kurtulmak isteyen birisin.'",
     options: [
       {
         text: "Sinirden ceketini yere fırlat.",
