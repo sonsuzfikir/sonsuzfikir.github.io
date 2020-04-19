@@ -48,7 +48,8 @@ const textNodes = [
         text: "Araba seslerinin geldiği yöne doğru git./--/Иди в направлении звука машины.",
         setState: { araba: true },
         nextText: 2
-      }
+      },
+		{text:"<<Спасибо Виктории огромное за исправление большой части моих ошибок>>"}
     ]
   },
   {
